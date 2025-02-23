@@ -7,7 +7,7 @@ const HeroSection = ({ emailRef }) => {
     
     const handleHireMeClick = () => {
         if (emailRef?.current) {
-            emailRef.current.scrollIntoView({ behavior: "smooth" }); // ✅ เลื่อนลงไปที่ EmailSection
+            emailRef.current.scrollIntoView({ behavior: "smooth" }); // เลื่อนลงไปที่ EmailSection
         }
     };
 
@@ -57,9 +57,9 @@ const HeroSection = ({ emailRef }) => {
 
                 {/* ✅ รูปภาพโปรไฟล์ */}
                 <div className='col-span-5 place-self-center mt-4 lg:mt-0'>
-                    <div className='rounded-full bg-[#2c2c2c] w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] flex items-center justify-center'> 
+                    <div className='rounded-full bg-[#2c2c2c] w-[200px] h-[200px] lg:w-[400px] lg:h-[400px] flex items-center justify-center'> 
                         <Image
-                            src={'/images/jinwoo.png'}
+                            src={'/images/programmer-icon.png'}
                             alt='Profile Picture'
                             width={300}
                             height={300}
