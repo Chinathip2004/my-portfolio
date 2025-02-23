@@ -11,6 +11,6 @@ const compat = new FlatCompat({
 
 const eslintConfig = [...compat.extends("next/core-web-vitals")];
 
-export default [
-  "next/core-web-vitals"
-];
+export default {
+  extends:"next/core-web-vitals"
+};
