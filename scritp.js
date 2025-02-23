@@ -1,17 +1,26 @@
 import emailjs from "emailjs-com";
 
 function sendMail() {
-  emailjs.init("YOUR_USER_ID"); // <-- แทนที่ "YOUR_USER_ID" ด้วยค่าจริงจาก EmailJS
+  emailjs.init(process.env.NEXT_PUBLIC_EMAILJS_USER=FwXMkVP9ATehYUmbR);
 
-  let parms = {
+  let params = {
     email: document.getElementById("email").value,
     subject: document.getElementById("subject").value,
     message: document.getElementById("message").value,
   };
-  
-  emailjs.send("service_dr1ljuv", "template_pgh82bb", parms)
-    
-    .catch((error) => {
-      console.error("Failed to send email:", error);
-    });
+
+  emailjs.send(
+    process.env.NEXT_PUBLIC_EMAILJS_SERVICE=service_dr1ljuv,
+    process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE=template_pgh82bb,
+    params
+  )
+  .then(response => {
+    console.log("✅ Email sent successfully!", response);
+  })
+  .catch(error => {
+    console.error("❌ Failed to send email:", error);
+  });
 }
+
+
+
