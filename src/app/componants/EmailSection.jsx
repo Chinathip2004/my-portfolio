@@ -41,7 +41,7 @@ const EmailSection = () => {
         I'm looking for an internship. You can contact here.
         </p>
         <div className="socials flex flex-row gap-2">
-          <Link href="https://github.com/Chinathip2004" target="_blank">
+          <Link href="github.com" target="_blank">
             <Image src="/Github-icon.svg" alt="Github Icon" width={32} height={32} />
           </Link>
         </div>
